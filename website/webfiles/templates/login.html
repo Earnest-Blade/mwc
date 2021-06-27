@@ -1,0 +1,30 @@
+<div id="page_content">
+    <div id="login_box">
+        <h1>Ravi de vous revoir !</h1>
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+            <div>
+                {{messages[0]}}
+            </div>
+        {%endif%}
+        {%endwith%}
+        <div class="login_inputs_box" >
+            <form action="/login" method="POST">
+                <input class="text_input" type="email" name="email" placeholder="Email">
+                <input class="text_input" type="password" name="password" placeholder="Password">
+                <div class="remember" style="position: relative; display: block ruby;">
+                    <input type="checkbox" name="remember" style="margin-right: 10px;" >
+                    <p>Se souvenir de moi</p>
+                </div>
+                
+                <input class="button_input" type="submit" name="btn_submit" value="Connexion">
+            </form>
+        </div>   
+        
+        <a href="https://discord.com/api/oauth2/authorize?client_id=768019436338151475&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Foauth%2Flogin&response_type=code&scope=identify%20email%20connections"
+            style="position: relative; top: -100px;">
+            <button class="button_input" style="width: 250px;">Connexion avec Discord</button>
+        </a>
+        
+    </div>
+</div>

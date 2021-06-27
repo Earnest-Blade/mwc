@@ -1,0 +1,75 @@
+<div id="page_content" class="waifu_page">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+
+    <div id="all_waifu_box">
+        
+        <div id="search_menu">
+            {% if showingType == 'waifu'%}
+                <h1 class="title" style="font-family: 'KoHo', sans-serif; text-align: center;" >Chercher une waifu</h1>
+            {% elif showingType == 'anime'%}
+                <h1 class="title" style="font-family: 'KoHo', sans-serif; text-align: center;" >Chercher une série</h1>
+            {% endif%}
+            <form action="/list/{{showingType}}" method="POST">
+                <input class="text_input" type="text" name="waifu_name_input" placeholder="Nom">
+                <input class="button_input" type="submit" value="Rechercher">
+            </form>
+            
+        </div>
+        <div class="list_selector">
+            <a class="list_selector_item" href="/list/waifu">Waifu</a>
+            <span class="horizontal_line" style="width: 3px; height: 30px;"></span>
+            <a class="list_selector_item" href="/list/anime">Anime</a>
+        </div>
+        {% if showingType == 'waifu'%}
+        {%for waifu in data.getAllWaifus()%}
+            {% if not searchres == "None" and searchres in waifu.getName() or searchres in waifu.name or searchres in waifu.name.lower()%}
+            <div id="waifu_resume" onclick="redirectToWaifu('waifu/{{waifu.getLowerName()}}')">
+                <img class="waifu_resume_image" src="{{waifu.getRandomImage()}}" height="200px">
+                <div class="short_informations">
+                    <h2 style="font-family: 'KoHo', sans-serif;">{{waifu.getName()}}</h2>
+                    <a class="link" href="">Série : {{waifu.getSerie()}}</a>
+                    <p style="font-size: 15px;">Tags : {{waifu.tagsToString()}}</p>
+                </div>
+                <div class="image_resume">
+                    {%for image in waifu.images%}
+                        {%if waifu.images.index(image) <= 2 %}
+                            <img class="all_waifu_image_resume" src="{{image}}" height="150px">
+                        {% endif %}
+                    {%endfor%}
+                </div>
+            </div>
+            {% endif %}
+        {%endfor%}
+        <p style="text-align: center;">{{data.getAllWaifus()|length}} waifus trouvées dans la banque de données !</p>
+        {% endif %}
+
+        {% if showingType == 'anime'%}
+        {%for serie in data.getAllSeries()%}
+            {% if not serie.images|length == 0%}
+                {% if not searchres == "None" and searchres in serie.getName() or searchres in serie.name or searchres in serie.name.lower()%}
+                <div id="waifu_resume" onclick="redirectToWaifu('serie/{{serie.name}}')">
+                    <img class="waifu_resume_image" src="{{serie.getRandomImage()}}" height="200px">
+                    <div class="short_informations">
+                        <h2 style="font-family: 'KoHo', sans-serif;">{{serie.getName()}}</h2>
+                        <p style="font-size: 15px;">Personnages : {{serie.getAllCharactersIn(lowerName=True)}}</p>
+                        <p style="font-size: 15px;">Tags : {{serie.tagsToString()}}</p>
+                    </div>
+                    <div class="image_resume">
+                        {%for image in serie.images%}
+                            {%if serie.images.index(image) <= 1 %}
+                                <img class="all_waifu_image_resume" src="{{image}}" height="150px">
+                            {% endif %}
+                        {%endfor%}
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+        {%endfor%}
+        
+        {% endif %}
+    </div>
+    <script>
+        function redirectToWaifu(waifuName){ document.location.href = "/" + waifuName} 
+    </script>
+
+</div>

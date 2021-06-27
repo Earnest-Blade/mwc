@@ -1,0 +1,36 @@
+<div id="page_content" class="waifu_page">
+    <div id="image_box">
+        {% if not imageURL == "None" %}
+            <img class="waifu_image" src="{{imageURL}}" height="800px">
+            
+            <div>
+                <h2>Informations :</h2>
+                <div class="informations">
+                    {% if not waifuref.__str__() == "SerieClass"%}
+                        <a class="link" href="/waifu/{{waifuref.getLowerName()}}">Personnage : {{waifuref.getName()}}</a>
+                    {% else %}
+                        <a class="link" href="/serie/{{waifuref.name}}">Serie : {{waifuref.getName()}}</a>
+                    {% endif%}
+                    <a class="link"><br>Nom de Debug : {{waifuref.name}}</a>
+                    <a class="link" href="{{imageURL}}"><br>Lien : <u>{{imageURL}}</u></a>
+                    <p class="size">widthXheight</p>
+                    <p>Les images ne sont pas sauvegardées sur le serveur de waifuBot.
+                    <br>Les images ne m'appartiennet pas : elles appartiennet à leur créateur respectif.</p>
+                </div>
+                
+            </div>
+        {% endif %}
+        
+
+    </div>
+    
+    <script>
+        var img = document.getElementsByClassName("waifu_image")[0]
+
+        img.onload = function(){
+            document.getElementsByClassName("size")[0].innerHTML = "Size : " + this.width + " x " + this.height
+        }
+        
+    </script>
+    
+</div>

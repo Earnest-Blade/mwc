@@ -1,0 +1,46 @@
+<div id="page_content" class="waifu_page">
+    <div id="waifu_box" class="waifu_full_box">
+        <div id="waifu_box" class="waifu_information_box">
+            <img class="waifu_image" src='{{serieref.getRandomImage()}}' height="500px">
+            <div id="waifu_box" class="waifu_text">
+                <h1 class="waifu_name">{{serieref.getName()}}</h1>
+                <h2 class="waifu_series">
+                    Personnages :
+                    {%for char in serieref.charctersIn%}
+                        <a class="serie_link" href="/waifu/{{char.getLowerName()}}"><br>- {{char.getName()}}</a>
+                    {%endfor%}
+                </h2>
+                <h2 class="waifu_series"></h2>
+                <p class="waifu_description">{{serieref.description}}</p>
+                <span class="vertical_line"></span>
+                <div class="serie_box_supports">
+                    {%for support in serieref.support%}
+                    <div class="serie_supports">
+                        <h2 class="waifu_series">{{support.type[1]}}</h2>
+                        <p class="waifu_description">{{support.information}}</p>
+                    </div>
+                    {% if not serieref.support.index(support) == serieref.support|length - 1%}
+                        <span class="horizontal_line" style="margin-right: 20px;"></span>
+                    {% endif %}
+                {%endfor%}
+                </div>
+                
+
+                {% if serieref.information %}
+                    <p class="waifu_description">{{serieref.information}}</p>
+                {% endif%}
+            </div>
+        </div>
+        <div id="waifu_box" class="waifu_box_image">
+            <h1 class="waifu_image_title">Images</h1>
+            {%for image in serieref.images%}
+                <a class="waifu_image_link" href="/image/{{serieref.name}}/image{{serieref.images.index(image)}}">
+                    <img class="waifu_image_content" src="{{image}}" height="400px">
+                </a>
+            {%endfor%}
+        </div>
+
+    </div>
+    
+    
+</div>

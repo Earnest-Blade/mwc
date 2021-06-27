@@ -1,0 +1,33 @@
+<div id="page_content" class="waifu_page">
+    <div id="waifu_box" class="waifu_full_box">
+        <div id="waifu_box" class="waifu_information_box">
+            <img class="waifu_image" src='{{waifuref.getRandomImage()}}' height="500px">
+            <div id="waifu_box" class="waifu_text">
+                <h1 class="waifu_name">{{waifuref.getName()}}</h1>
+                <h2 class="waifu_series">
+                    Apparaît dans :
+                    <a class="serie_link" href="/serie/{{waifuref.getSerieObject().name}}">{{waifuref.getSerieObject().getName()}}</a>
+                </h2>
+                <h2 class="waifu_series">Naissance : {{waifuref.getBirthday()}}</h2>
+                <p class="waifu_description">{{waifuref.description}}</p>
+                <p class="waifu_description">Ajouté par : {{waifuref.submit}}</p>
+                <p class="waifu_description">Tags : {{waifuref.tagsToString()}}</p>
+            </div>
+        </div>
+        <div id="waifu_box" class="waifu_box_image">
+            <h1 class="waifu_image_title">Images</h1>
+            <div class="image_container">
+                
+                {%for image in waifuref.images%}
+                    <a class="waifu_image_link" href="/image/{{waifuref.getLowerName()}}/image{{waifuref.images.index(image)}}" style="text-decoration: none;">
+                        <img class="waifu_image_content" src="{{image}}" height="400px">
+                    </a>
+                {%endfor%}
+            </div>
+            
+        </div>
+
+    </div>
+    
+    
+</div>

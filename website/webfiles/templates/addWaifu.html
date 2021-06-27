@@ -1,0 +1,43 @@
+<div id="page_content">
+    <div id="base_container">
+        <div id="new_waifu_title">
+            <h1>Ajoute ta Waifu !</h1>
+            <p>Ta waifu ne se trouve pas dans la liste ? Ajoute là toi même !</p>
+        </div>
+        <form action="/addwaifu" method="post" style="position: relative; display: flex;">
+            <input class="text_input" type="text" name="waifu_name" placeholder="Nom">
+            <input class="text_input" type="text" name="waifu_birthday" placeholder="jour,mois">
+
+            <input class="text_input" type="text" name="image_list" maxlength="0" style="height: 0; width: 0; font-size: 0;">
+        </form>
+        <h1>Images</h1>
+        <div id="add_image_box">
+            <div class="image_render">
+                <img class="image_render_thumbail" height="250px">
+                <p class="image_url_list_output"></p>
+            </div>
+            <input class="text_input" type="url" name="waifu_image_url" placeholder="URL" style="width: 800px;">
+            <button class="button_input" onclick="add_image_URL()">Ajouter</button>
+        </div>
+    </div>
+
+    <script> 
+        const add_image_box = document.getElementById('add_image_box');
+        const image_box = document.getElementsByClassName('image_render')[0];
+        const image_render = document.getElementsByClassName('image_render_thumbail')[0];
+        const image_url_input = document.querySelector('[name="waifu_image_url"]')
+        image_box.style.display = 'none'
+
+        function add_image_URL(){
+            if (image_url_input.value != ""){
+                var clone = image_box.cloneNode(true);
+                clone.childNodes[3].innerHTML = image_url_input.value 
+                clone.childNodes[1].src = image_url_input.value 
+                clone.style.display = "flex"
+                image_box.after(clone);
+                image_url_input.value = ""
+            }
+            
+        }
+    </script>
+</div>

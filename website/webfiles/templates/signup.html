@@ -1,0 +1,26 @@
+<div id="page_content">
+    <div id="login_box">
+        <h1>Profitez encore plus de My Waifu Collection !</h1>
+        {% with messages = get_flashed_messages()%}
+        {% if messages %}
+            <div>
+                {{messages[0]}} Go to <a href="/login">login page</a>
+            </div>
+        {%endif%}
+        {%endwith%}
+        <div class="login_inputs_box" >
+            <form action="/signup" method="POST">
+                <input class="text_input" type="username" name="username" placeholder="Username">
+                <input class="text_input" type="email" name="email" placeholder="Email">
+                <input class="text_input" type="password" name="password" placeholder="Password">
+                <input class="button_input" type="submit" name="btn_submit" value="Connexion">
+            </form>
+        </div>   
+        
+        <a href="https://discord.com/api/oauth2/authorize?client_id=768019436338151475&redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Foauth%2Fsignup&response_type=code&scope=identify%20email%20connections"
+            target="_blank">
+            <button class="button_input" style="width: 220px; padding: 0 20px 0 20px;">S'inscire avec Discord</button>
+        </a>
+        
+    </div>
+</div>

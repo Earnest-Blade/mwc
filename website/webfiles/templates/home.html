@@ -1,0 +1,38 @@
+<div id="page_content" class="home_page">
+    <div class="post_container">
+        <h1 style="text-align: center; font-size: 50px; padding: 20px;">L'Actualité de My Waifu Collection</h1>
+        <div class="post_container_item">
+            {%for post in webclassref.POSTS%}
+                {%if webclassref.POSTS.index(post) <= 1 %}
+                <div id="post" onclick="redirect('forum/post/{{webclassref.POSTS.index(post)}}')">
+                    <img class="post_thumbail" src="{{post.image}}" height="500px">
+                    <h1 class="post_title">{{post.title}}</h1>
+                    <div class="post_tags_and_date">
+                        <p class="post_tags">Tags : <a href="#">{{post.tags}}</a> <br>Date : {{post.date}}</p>
+                    </div>     
+                </div>
+                {% endif %}
+            {%endfor%}
+        </div>
+        <a class="basic_purple_button" href="#">Lire plus</a>
+    </div>
+    
+    <div class="post_container">
+        <h1 style="text-align: center;"> Le Staff </h1>
+        <div id="staff_box">
+            <img src="{{ url_for('static', filename='templates/res/img/lucatamere_img.png') }}" height="200px">
+            <div class="information_text">
+                <h2>LucaTaMère</h2>
+                <p>Développeur de l'API python et du site, j'ai aussi fondé le projet, on raconte que je suis rigolo (mais c'est pas sûr...).</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function redirect(URL){
+            document.location.href = "/" + URL
+        }
+    </script>
+    
+</div>

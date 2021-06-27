@@ -1,0 +1,113 @@
+<animes>
+    <serie>
+        <name>High_school_dxd</name>
+        <description>
+            Issei Hyoudou est un lycéen ordinaire, obsédé par les filles mais il n'a aucun succès auprès de la gente féminine. Un jour, Yuuma lui demande de sortir avec lui. Le rendez-vous se passe bien en de fin de journée, Yuuma lui chuchote à l'oreille de mourir pour elle, puis se transforme en ange déchu et le tue. 
+            Le lendemain Issei se réveille pensant que les évènements de la veille avec Yuuma n'étaient qu'un mauvais rêve. Cependant, en fin d'après-midi, il est de nouveau attaqué par un autre ange déchu, Rias Gremory le sauve. Le lendemain, il se réveille en compagnie de Rias nue dans son lit. Cette dernière lui révèle qu'elle est un démon, qu'Issei n'est plus tout à fait humain et est devenu son serviteur.
+        </description>
+        <images>
+            <image>https://s1.zerochan.net/Highschool.DxD.600.1395895.jpg</image>
+            <image>https://static.zerochan.net/Highschool.DxD.full.1581568.jpg</image>
+        </images>
+        <tags>ecchi,démon,action</tags>
+        <information></information>
+        <othersSupport>
+            <lightNovel>
+                <information>
+                    Écrit par Ichiei Ishibumi et illustré par Miyama-Zero, il est sorti le 20 septembre 2008.
+                    Il est composé de 25 volumes avec 4 spin-off.
+                </information>
+            </lightNovel>
+            <manga>
+                <information>
+                    Adaptation du light Novel, il est composé de 11 tomes.
+                </information>
+            </manga>
+        </othersSupport>
+    </serie>
+
+    <serie>
+        <name>Konosuba</name>
+        <description>
+            Kono subarashii sekai ni shukufuku o! (Une bénédiction pour ce monde merveilleux !), abrégée KonoSuba, est une série de light novel écrite par Natsume Akatsuki.
+             Celle-ci suit l'aventure d'un garçon qui est envoyé dans un monde fantastique après sa mort, formant une équipe à problèmes avec une déesse, une magicienne, et une croisée pour lutter contre les monstres. 
+        </description>
+        <images>
+            <image>https://s1.zerochan.net/KonoSuba%21.-Kibou.no.Meikyuu.to.Tsudoishi.Boukensha-tachi%21-.600.2962410.jpg</image>
+            <image>https://s1.zerochan.net/Kono.Subarashii.Sekai.ni.Shukufuku.wo%21.Yorimichi%21.600.2797969.jpg</image>
+            <image>https://static.zerochan.net/Kono.Subarashii.Sekai.ni.Shukufuku.wo%21.Fantastic.Days.full.3075605.jpg</image>
+        </images>
+        <tags>comédie,isekai,fantasy</tags>
+        <information></information>
+        <othersSupport>
+            <lightNovel>
+                <information>
+                    Écrit par Natsume Akatsuki et illustré par Kurone Mishima, il est sorti le 1er octobre 2013 et est composé de 18 volumes.
+                </information>
+            </lightNovel>
+            <manga>
+                <information>
+                    Écrit par Natsume Akatsuki et illustré par Masahito Watari, c'est l'adaptation du light novel, le premier tome est sorti le 9 septembre 2014. Il est compsé de 13 tome et est toujours en cours de publication.
+                </information>
+            </manga>
+        </othersSupport>
+    </serie>
+
+    <serie>
+        <name>Nisekoi</name>
+        <description>
+            Nisekoi : Amours, mensonges et yakuzas est un manga écrit et dessiné par Naoshi Komi. Il est prépublié entre novembre 2011 et août 2016 dans le magazine Weekly Shōnen Jump de l'éditeur Shūeisha, et est compilé en vingt-cinq tomes. 
+            La version française est éditée par Kazé depuis septembre 2013. 
+        </description>
+        <images>
+            <image>https://images.sgcafe.net/2013/05/Nisekoi.full_.1247218.jpg</image>
+            <image>http://i2.wp.com/haruhichan.com/wpblog/wp-content/uploads/Nisekoi-Season-2-Visual-Revealed-nisekoi-2nd-season-anime-visual.jpg</image>
+            <image>https://www.otakutale.com/wp-content/uploads/2014/10/Nisekoi-Magazine-Scan.jpg</image>
+        </images>
+        <tags>romance,school life,slice of life,comédie,drame</tags>
+        <information></information>
+        <othersSupport>
+            <lightNovel>
+                <information>
+                    Écrit par Hajime Tanaka et illustré par Naoshi Komi, il est sorti le 4 juin 2013. C'est l'adaptations du manga.
+                    Il est composé de 3 volumes.
+                </information>
+            </lightNovel>
+            <manga>
+                <information>
+                    Écrit et dessiné par Naoshi Komi, les mangas sont en 25 tomes.
+                </information>
+            </manga>
+        </othersSupport>
+    </serie>
+
+    <serie>
+        <name>Re:Zero</name>
+        <description>
+            Re:Zero kara Hajimeru Isekai Seikatsu, ou Re:Zero − Re:vivre dans un autre monde à partir de zéro en français, aussi connu sous son nom anglais Re:Zero − Starting Life in Another World, est une série de light novel japonais écrite par Nagatsuki Tappei et illustrée par Ootsuka Shinichirou. La série est publiée par MF Bunjo J depuis janvier 2014, et a également une sous-série connu sous le nom de Re:Zero kara Hajimeru Isekai Seikatsu Ex, qui raconte les événements précédant le début de la série.
+            La série de light novel a été adaptée en série d'animation actuellement en production ainsi qu'en différentes séries de manga. De plus, deux OVA (ou OAV) ont vu le jour. Des adaptations en jeux vidéos existent également. 
+        </description>
+        <images>
+            <image>http://pm1.narvii.com/7157/d4971ab39a3a33f7d800d86307d588f9f996e76fr1-680-956v2_uhq.jpg</image>
+            <image>https://news.otakukart.com/wp-content/uploads/2020/03/re-zero-season-2.jpg</image>
+        </images>
+        <tags>fantasy,isekai</tags>
+        <information></information>
+        <othersSupport>
+            <lightNovel>
+                <information>
+                    Écrit par Tappei Nagatsuki et illustré par Shinichirou Otsuka, il est sorti le 25 janvier 2014.
+                    Il est composé de 26 volumes avec 4 annexes et 6 recueils 
+                </information>
+            </lightNovel>
+            <manga>
+                <information>
+                    Adaptation du light Novel, il est composé de 4 arcs.
+                </information>
+            </manga>
+        </othersSupport>
+    </serie>
+
+    
+    
+</animes>

@@ -1,0 +1,682 @@
+:root{
+    --main-color: rgb(118, 177, 182);
+    --dark-color: rgb(60, 120, 126);
+    --second-color: rgb(175, 199, 211);
+    --input-color: rgb(170,182,118);
+}
+
+div.navigator_menu{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: var(--main-color);
+    border-bottom-left-radius: 40% 40%;
+    border-bottom-right-radius: 40% 40%;
+}
+
+a.menu_link{
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-bottom: -40px;
+    font-family: 'KoHo', sans-serif;
+    text-decoration: none;
+}
+
+a.menu_link::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    height: 3px;
+    margin: 5px 0 0;
+    opacity: 0;
+    background-color: var(--dark-color);
+    transition: 0.25s;
+} 
+
+a.menu_link:hover::before{
+    opacity: 1;
+    width: 100%;
+}
+
+div.menu_list li{
+    display: inline;
+    justify-content: left;
+}
+
+div.menu_list_div{
+    display: inline-flex;
+}
+
+div#page_content{
+    position: relative;
+    top: 90px;
+}
+
+h1, h2{
+    font-weight: bold;
+    font-family: 'Signika', sans-serif;
+}
+
+p{
+    font-weight: 400;
+    color: rgb(26, 26, 26);
+    font-family: 'KoHo', sans-serif;
+}
+
+div#waifu_box.waifu_information_box{
+    position: relative;
+    display: inline-flex;
+    margin: 15px;
+    width: 90%;
+    height: 100%;
+    padding: 25px;
+}
+
+div#waifu_box.waifu_text{
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    padding: 20px;
+    margin-left: 25px;
+}
+
+img.waifu_image{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin: auto;
+}
+
+a.serie_link{
+    position: relative;
+    color: black;
+    left: 20px;
+    text-decoration: none;
+}
+
+span.vertical_line{
+    display: block;
+    background: var(--main-color);
+    width: 100%;
+    height: 3px;
+    margin: 30px 0 30px 0;
+    border-radius: 50px;
+}
+
+span.horizontal_line{
+    display: inline-block;
+    position: relative;
+    background: var(--main-color);
+    width: 3px;
+    height: 250px;
+    border-radius: 50px;
+}
+
+#waifu_box div.waifu_box_image{
+    position: relative;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    padding: 25px;
+}
+
+#waifu_box div.waifu_box_image .image_container{
+    display: flex;
+}
+
+
+div.waifu_box_image h1.waifu_image_title{
+    font-size: 45px;
+    text-align: center;
+}
+
+#waifu_box img.waifu_image_content{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin: 20px;
+    transition: .5s;
+}
+
+#waifu_box img.waifu_image_content:hover{
+    opacity: 0.25;
+    
+}
+
+#waifu_box div.serie_box_supports{
+    position: relative;
+    display: flex;
+}
+
+#waifu_box div.serie_supports{
+    position: relative;
+    width: 33%;
+    margin-right: 15px;
+}
+
+div#image_box{
+    position: relative;
+    display: flex;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    padding: 15px;
+    top: 50px;
+}
+
+div#image_box img{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin: 15px;
+}
+
+a.link{
+    color: black;
+    text-decoration: none;
+    font-family: 'KoHo', sans-serif;
+}
+#image_box h2{
+    font-size: 35px;
+}
+
+#image_box div.informations{
+    position: relative;
+    left: 50px;
+}
+
+#image_box a, p{
+    font-size: 25px;
+}
+
+div#waifu_resume{
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+    animation: .25s ease-out 0s 1 slideInFromLeft;
+}
+
+div#waifu_resume:hover{
+    opacity: 0.5;
+}
+
+div#waifu_resume a{
+    font-size: 25px;
+}
+
+
+div#waifu_resume div.image_resume{
+    left: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 200px;
+}
+
+div#waifu_resume img.all_waifu_image_resume{
+    margin-left: 15px;
+    border-radius: 50px;
+}
+
+div#waifu_resume .short_informations{
+    position: relative;
+    align-items: center;
+    left: 50px;
+}
+
+div#waifu_resume img.waifu_resume_image{
+    border-radius: 50px;
+}
+
+div#search_menu{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+input.text_input{
+    font-family: 'KoHo', sans-serif;
+    width: 300px;
+    border: 0;
+    border-bottom: 2px solid var(--main-color);
+    outline: 0;
+    font-size: 25px;
+    color: black;
+    padding: 7px;
+    transition: border-color 0.2s;
+    transition: 0.5s ease-in-out;
+    margin: 15px;
+    margin-bottom: 25px;
+}
+
+input.text_input:placeholder-shown{
+    position: relative;
+    left: 50px;
+}
+
+input.text_input:focus{
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+}
+
+.button_input{
+    font-family: 'KoHo', sans-serif;
+    width: 150px;
+    border: 0;
+    border-bottom: none;
+    outline: 0;
+    font-size: 25px;
+    color: black;
+    padding: 7px;
+    transition: border-color 0.2s;
+    transition: 0.5s ease-in-out;
+    margin: 15px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+}
+
+.button_input:placeholder-shown{
+    position: relative;
+    left: 50px;
+}
+
+.button_input:hover{
+    background-color: rgba(144, 144, 144, 0.774);
+    color: white;
+    
+}
+
+div.list_selector{
+    position: relative;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+}
+
+div.list_selector a{
+    position: relative;
+    font-family: 'KoHo', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-left: 50px;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    cursor: pointer;
+}
+
+
+div.list_selector a::before{
+    content: "";
+    position: absolute;
+    left: -10%;
+    bottom: 0px;
+    width: 0;
+    height: 3px;
+    margin: 5px 0 0;
+    opacity: 0;
+    background-color: var(--dark-color);
+    transition: 0.25s;
+} 
+
+div.list_selector a:hover::before{
+    opacity: 1;
+    width: 110%;
+}
+
+div.left_box{
+    position: absolute;
+    display: inline;
+    width: 10%;
+    padding: 25px;
+    z-index: 3;
+}
+
+div.left_box a.link{
+    position: relative;
+    font-size: 30px;
+    transition: all 1s ease-out;
+}
+
+div.left_box a.link:hover{
+    left: 15px;
+}
+
+.dynamic-content {
+    display:none;
+}
+
+#profil_harem{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#profil_harem a.profil_harem_waifu{
+    cursor: pointer;
+    margin: 15px;
+    position: relative;
+    display: flex;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    opacity: 1;
+    max-width: 700px;
+    transition: ease-in-out .25s;
+    text-decoration: none;
+}
+
+#profil_harem a.profil_harem_waifu img{
+    border-radius: 50px;
+    margin: 20px;
+    object-fit: cover;
+    max-width: 400px;
+}
+
+#profil_harem a.profil_harem_waifu h2{
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    color: black;
+}
+
+
+#profil_harem a.profil_harem_waifu:hover{
+    opacity: .5;
+}
+
+#profil_harem a.profil_harem_waifu .profil_waifu_text{
+    position: relative;
+    display: block;
+}
+
+h2.profil_title{
+    font-weight: 500; 
+    font-size: 40px; 
+    text-align: center;
+}
+
+div#not_found_box{
+    position: relative;
+    display: block;
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    top: 50px;
+}
+
+div#not_found_box h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+div#not_found_box h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+div.home_page{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1400px;
+}
+
+div.post_container{
+    position: relative;
+    top: 50px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+
+div.post_container_item{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+div#post{
+    display: block;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    opacity: 1;
+    margin: 15px;
+    
+}
+
+div#post:hover{
+    opacity: .5;
+}
+
+div#post h1.post_title{
+    text-align: center;
+}
+
+div#post img.post_thumbail{
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    max-width: 500px;
+    object-fit: cover;
+    box-shadow: 6px 2px 10px rgb(204, 204, 204);
+}
+
+div#post div.post_tags_and_date{
+    display: flex;
+    width: 100%;
+}
+
+div#post div.post_tags_and_date p.post_tags{
+    position: relative;
+    left: 20px;
+}
+
+div#post div.post_tags_and_date p.post_tags a{
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+a.basic_purple_button{
+    position: relative;
+    display: flex;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 32px;
+    font-family: 'KoHo', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    width: 160px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 5px 10px;
+    transition: .25s ease-in-out;
+}
+
+a.basic_purple_button:hover{
+    background-color: var(--second-color);
+    color: rgb(39, 39, 39);
+}
+
+div#post_box{
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    position: relative;
+    top: 50px;
+}
+
+div#post_box span.post_image{
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 100%;
+    top: 50px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transform-style: inherit;
+}
+
+
+div.text_post_container{
+    position: relative;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    border-radius: 50px;
+    padding: 50px;
+    transition: 1s ease-in-out;
+}
+
+
+div#post_box h2{
+    text-align: center;
+}
+
+div#post_box h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+div#staff_box{
+    position: relative;
+    display: inline-flex;
+}
+
+div#staff_box img{
+    margin: 15px;
+    margin-bottom: 25px;
+    border-radius: 50px;
+}
+
+div#staff_box div.information_text{
+    position: relative;
+    left: 25px;
+    top: 50px
+}
+
+div#login_box{
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+}
+
+div#login_box{
+    margin-top: 50px;
+    font-size: 35px;
+    text-align: center;
+    height: 800px;
+}
+
+div.login_inputs_box{
+    margin: 150px;
+}
+
+#base_container{
+    top: 25px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    margin-top: 25px;
+}
+
+img.profil_icon{
+    position: relative; 
+    border-radius: 50px; 
+    top: 5px;
+    border: 3px solid var(--second-color);
+    transition: ease-in-out .5s;
+}
+
+table {
+    position: relative;
+    left: 10px;
+    margin: 30px;
+    width: 95%;
+}
+
+td, th {
+    display: table-cell;
+    font-size: 32px;
+    font-family: 'KoHo', sans-serif;
+    padding: 10px;
+    border-bottom: thin solid rgba(0,0,0,.125);
+    border-left: thin solid rgba(0,0,0,.125);
+    border-right: thin solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    width: 50%;
+}
+
+#add_image_box div.image_render{
+    position: relative;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 50px;
+    width: 80%;
+    margin-left: 50px;
+}
+
+svg.wave{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+    z-index: -5;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+

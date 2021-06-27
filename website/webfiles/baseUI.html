@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>My Waifu Collection {{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type='text/css' href='{{ url_for('static', filename='style.css') }}' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Waifu Bot</title>
+</head>
+<body>
+    <div class="navigator_menu">
+        <div class="menu_list" style="margin-left: 10%">
+            <li class="menu_list_div" style="left: 50%;">
+                <div>
+                    <li class="menu_list_item">
+                        <a class="menu_link" href="/">Accueil</a>
+                    </li>
+                    <li class="menu_list_item">
+                        <a class="menu_link" href="/list/waifu">Liste</a>
+                    </li>
+                    <li class="menu_list_item">
+                        <a class="menu_link" href="/discord">Discord</a>
+                    </li>
+                    <li class="menu_list_item">
+                        <a class="menu_link" href="/api">API</a>
+                    </li>
+                    
+                    {% if not current_user.name%}
+                    <li class="menu_list_item" style="margin-left: 500px;">
+                        <a class="menu_link" href="/login">Connexion</a>
+                    </li>
+                    <li class="menu_list_item">
+                        <a class="menu_link" href="/signup">S'inscrire</a>
+                    </li>
+                    {%else%}
+                    
+                    <li class="menu_list_item" style="margin-left: 500px;">
+                        <a class="menu_link" href="/profil">{{current_user.name}}
+                            <img src="{{current_user.avatar_URL}}" height="60px" class="profil_icon">
+                        </a>
+                        
+                    </li>
+                    {% endif%}
+                </div>
+            </li>
+            
+            
+        </div>
+    </div> 
+    
+    {% include pagepath %}
+
+    <span>
+        <div id="base_container" style="position: relative; display: flex; top: 300px; width: 80%; margin-left: auto; margin-right: auto;">
+            <p style="margin-left: auto; margin-right: auto;">Developpé avec Amour par LucaTaMère</p>
+            
+        </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#76b1b6" fill-opacity="1" d="M0,128L16,112C32,96,64,64,96,48C128,32,160,32,192,26.7C224,21,256,11,288,53.3C320,96,352,192,384,213.3C416,235,448,181,480,160C512,139,544,149,576,149.3C608,149,640,139,672,138.7C704,139,736,149,768,149.3C800,149,832,139,864,138.7C896,139,928,149,960,160C992,171,1024,181,1056,186.7C1088,192,1120,192,1152,160C1184,128,1216,64,1248,64C1280,64,1312,128,1344,128C1376,128,1408,64,1424,32L1440,0L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"></path></svg>
+    </span>
+  
+</body>
+</html>

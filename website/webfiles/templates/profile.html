@@ -1,0 +1,83 @@
+<div id="page_content">
+    <div id="base_container" class="left_box">
+        <a class="link" href="/profil?menu=account">Mon Compte</a>
+        <a class="link" href="/profil?menu=discord">Discord</a>
+        <a class="link" href="/profil?menu=parameters">Paramètres</a>
+    </div>  
+    <div id="base_container" class="home_page" style="position: relative;">  
+        <div id="account" class="dynamic-content" style="max-width: 1300px; margin-left: auto; margin-right: auto;">
+            <h2 class="profil_title">Compte de {{current_user.name}}</h2>
+
+            <div id="profil_informations">
+                {% if not current_user.link_to_discord%}
+                    <p>Liez votre compte discord pour pouvoir gérer votre Harem</p>
+				{%else%}
+					<p>Votre compte My Waifu Collection est lié à l'utilisateur Discord @{{current_user.name}}.</p>
+                {%endif%}
+            </div>
+
+			<h2 class="profil_title">Votre Harem</h2>
+			<div id="waifu_resume" onclick="redirectToWaifu('waifu/{{waifuUser.masterWaifu.getLowerName()}}')">
+                <img class="waifu_resume_image" src="{{waifuUser.masterWaifu.getRandomImage()}}" height="200px">
+                <div class="short_informations" style="display: flex;">
+                    <h2 style="font-family: 'KoHo', sans-serif;">{{waifuUser.masterWaifu.getName()}}</h2>
+					<img src="https://pngimage.net/wp-content/uploads/2018/06/logo-couronne-png-4.png" height="50px"
+					style="position: relative; margin-left: 50px;">
+                </div>
+            </div>
+			<div id="profil_harem">
+				{% for waifu in waifuUser.harem%}
+				{% if not waifuUser.masterWaifu.name == waifu.name%}
+				<a class="profil_harem_waifu" href="/waifu/{{waifu.getLowerName()}}" >
+					<img src="{{waifu.getRandomImage()}}" height="400px">
+					<div class="profil_waifu_text">
+						<h2>{{waifu.getName()}}</h2>
+					</div>
+				</a>
+				{%endif%}
+				{%endfor%}
+			</div>
+        </div>
+
+        <div id="discord" class="dynamic-content">
+            Discord
+        </div>
+          
+        <div id="parameters" class="dynamic-content">
+            Parameters
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+    
+	var dynamicContent = getParameterByName('menu');
+ 
+	 $(document).ready(function() {
+ 
+		if (dynamicContent == 'account') {
+			$('#account').show();
+		} 
+        
+		else if (dynamicContent == 'discord') {
+			$('#discord').show();
+		} 
+        
+		else if (dynamicContent == 'parameters') {
+			$('#parameters').show();
+		} 
+		// Check if the URL parmeter is empty or not defined, display default content
+		else {
+			$('#account').show();
+		}
+	});
+</script>

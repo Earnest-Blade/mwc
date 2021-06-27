@@ -1,0 +1,11 @@
+<posts>
+    <post title="MAJ de l'API Python - Nouvelles Waifus !" image="https://static.zerochan.net/Nakano.Itsuki.full.2745878.jpg" date="Mardi 1 juin - 2021">
+        <text>templates/res/post02.html</text>
+        <tags>MAJ, API, Discord</tags>
+    </post>
+<!--https://wallpapercave.com/wp/wp4993301.png-->
+    <post title="Innoguration de la page de My Waifu Collection !" image="https://wallpapercave.com/wp/wp4993301.png" date="Mardi 1 juin - 2021">
+        <text>templates/res/post01.html</text>
+        <tags>MAJ, Nouveautée</tags>
+    </post>
+</posts>
